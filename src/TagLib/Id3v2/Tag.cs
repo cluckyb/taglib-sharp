@@ -48,7 +48,7 @@ namespace TagLib.Id3v2 {
 		///    fields.
 		/// </summary>
 		private static string language = 
-			CultureInfo.CurrentCulture.ThreeLetterISOLanguageName;
+			CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
 		
 		/// <summary>
 		///    Contains the field to use for new tags.

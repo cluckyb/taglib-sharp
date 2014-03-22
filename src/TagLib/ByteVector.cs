@@ -2342,7 +2342,7 @@ namespace TagLib {
 			}
 			
 			if (use_broken_latin1)
-				return Encoding.Default;
+				return Encoding.UTF8;
 			
 			try {
 				return Encoding.GetEncoding ("latin1");

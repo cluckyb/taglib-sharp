@@ -200,8 +200,13 @@ namespace TagLib.Id3v2
 			foreach (Frame frame in tag) {
 				popm = frame as PopularimeterFrame;
 				
-				if (popm != null && popm.user.Equals (user))
+				if (popm != null)
+                {
+                    if (popm.user.Equals (user))
+                    {
 					return popm;
+                    }
+                }
 			}
 			
 			if (!create)
@@ -211,6 +216,23 @@ namespace TagLib.Id3v2
 			tag.AddFrame (popm);
 			return popm;
 		}
+
+
+        public static PopularimeterFrame GetAny(Tag tag)
+        {
+            PopularimeterFrame popm;
+            foreach (Frame frame in tag)
+            {
+                popm = frame as PopularimeterFrame;
+
+                if (popm != null)
+                {
+                    return popm;
+                }
+            }
+
+            return null;
+        }
 		
 		#endregion
 		
@@ -295,5 +317,6 @@ namespace TagLib.Id3v2
 		}
 		
 #endregion
-	}
+
+    }
 }

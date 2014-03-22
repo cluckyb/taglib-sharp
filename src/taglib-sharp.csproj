@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -6,12 +6,19 @@
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{6B143A39-C7B2-4743-9917-92262C60E9A6}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TagLib</RootNamespace>
-    <ApplicationIcon>.</ApplicationIcon>
     <AssemblyName>taglib-sharp</AssemblyName>
     <ReleaseVersion>2.0.4.0</ReleaseVersion>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -46,6 +53,7 @@
     <Compile Include="TagLib\ByteVector.cs" />
     <Compile Include="TagLib\ByteVectorList.cs" />
     <Compile Include="TagLib\CombinedTag.cs" />
+    <Compile Include="TagLib\ICloneable.cs" />
     <Compile Include="TagLib\CorruptFileException.cs" />
     <Compile Include="TagLib\Debugger.cs" />
     <Compile Include="TagLib\File.cs" />
@@ -92,63 +100,6 @@
     <Compile Include="TagLib\Flac\File.cs" />
     <Compile Include="TagLib\Flac\Picture.cs" />
     <Compile Include="TagLib\Flac\StreamHeader.cs" />
-    <Compile Include="TagLib\Gif\Codec.cs" />
-    <Compile Include="TagLib\Gif\File.cs" />
-    <Compile Include="TagLib\Gif\GifCommentTag.cs" />
-    <Compile Include="TagLib\IFD\IFDDirectory.cs" />
-    <Compile Include="TagLib\IFD\IFDEntry.cs" />
-    <Compile Include="TagLib\IFD\IFDEntryType.cs" />
-    <Compile Include="TagLib\IFD\IFDReader.cs" />
-    <Compile Include="TagLib\IFD\IFDRenderer.cs" />
-    <Compile Include="TagLib\IFD\IFDStructure.cs" />
-    <Compile Include="TagLib\IFD\IFDTag.cs" />
-    <Compile Include="TagLib\IFD\Entries\ByteIFDEntry.cs" />
-    <Compile Include="TagLib\IFD\Entries\ByteVectorIFDEntry.cs" />
-    <Compile Include="TagLib\IFD\Entries\LongArrayIFDEntry.cs" />
-    <Compile Include="TagLib\IFD\Entries\LongIFDEntry.cs" />
-    <Compile Include="TagLib\IFD\Entries\MakernoteIFDEntry.cs" />
-    <Compile Include="TagLib\IFD\Entries\Rational.cs" />
-    <Compile Include="TagLib\IFD\Entries\RationalArrayIFDEntry.cs" />
-    <Compile Include="TagLib\IFD\Entries\RationalIFDEntry.cs" />
-    <Compile Include="TagLib\IFD\Entries\SByteIFDEntry.cs" />
-    <Compile Include="TagLib\IFD\Entries\SLongArrayIFDEntry.cs" />
-    <Compile Include="TagLib\IFD\Entries\SLongIFDEntry.cs" />
-    <Compile Include="TagLib\IFD\Entries\SRational.cs" />
-    <Compile Include="TagLib\IFD\Entries\SRationalArrayIFDEntry.cs" />
-    <Compile Include="TagLib\IFD\Entries\SRationalIFDEntry.cs" />
-    <Compile Include="TagLib\IFD\Entries\SShortArrayIFDEntry.cs" />
-    <Compile Include="TagLib\IFD\Entries\SShortIFDEntry.cs" />
-    <Compile Include="TagLib\IFD\Entries\ShortArrayIFDEntry.cs" />
-    <Compile Include="TagLib\IFD\Entries\ShortIFDEntry.cs" />
-    <Compile Include="TagLib\IFD\Entries\StringIFDEntry.cs" />
-    <Compile Include="TagLib\IFD\Entries\StripOffsetsIFDEntry.cs" />
-    <Compile Include="TagLib\IFD\Entries\SubIFDArrayEntry.cs" />
-    <Compile Include="TagLib\IFD\Entries\SubIFDEntry.cs" />
-    <Compile Include="TagLib\IFD\Entries\ThumbnailDataIFDEntry.cs" />
-    <Compile Include="TagLib\IFD\Entries\UndefinedIFDEntry.cs" />
-    <Compile Include="TagLib\IFD\Entries\UserCommentIFDEntry.cs" />
-    <Compile Include="TagLib\IFD\Makernotes\Nikon3MakernoteReader.cs" />
-    <Compile Include="TagLib\IFD\Tags\CanonFileInfoEntryTag.cs" />
-    <Compile Include="TagLib\IFD\Tags\CanonMakerNoteEntryTag.cs" />
-    <Compile Include="TagLib\IFD\Tags\CanonPictureInfoEntryTag.cs" />
-    <Compile Include="TagLib\IFD\Tags\ExifEntryTag.cs" />
-    <Compile Include="TagLib\IFD\Tags\GPSEntryTag.cs" />
-    <Compile Include="TagLib\IFD\Tags\IFDEntryTag.cs" />
-    <Compile Include="TagLib\IFD\Tags\IOPEntryTag.cs" />
-    <Compile Include="TagLib\IFD\Tags\Nikon3MakerNoteEntryTag.cs" />
-    <Compile Include="TagLib\IFD\Tags\NikonIsoInfoEntryTag.cs" />
-    <Compile Include="TagLib\IFD\Tags\NikonLensData3EntryTag.cs" />
-    <Compile Include="TagLib\IFD\Tags\NikonPictureControlEntryTag.cs" />
-    <Compile Include="TagLib\IFD\Tags\NikonPreviewMakerNoteEntryTag.cs" />
-    <Compile Include="TagLib\IFD\Tags\NikonShotInfoEntryTag.cs" />
-    <Compile Include="TagLib\IFD\Tags\NikonVibrationReductionEntryTag.cs" />
-    <Compile Include="TagLib\IFD\Tags\NikonWorldTimeEntryTag.cs" />
-    <Compile Include="TagLib\IFD\Tags\OlympusMakerNoteEntryTag.cs" />
-    <Compile Include="TagLib\IFD\Tags\PanasonicMakerNoteEntryTag.cs" />
-    <Compile Include="TagLib\IFD\Tags\PentaxMakerNoteEntryTag.cs" />
-    <Compile Include="TagLib\IFD\Tags\SonyMakerNoteEntryTag.cs" />
-    <Compile Include="TagLib\IIM\IIMReader.cs" />
-    <Compile Include="TagLib\IIM\IIMTag.cs" />
     <Compile Include="TagLib\Id3v1\StringHandler.cs" />
     <Compile Include="TagLib\Id3v1\Tag.cs" />
     <Compile Include="TagLib\Id3v2\ExtendedHeader.cs" />
@@ -174,18 +125,6 @@
     <Compile Include="TagLib\Id3v2\Frames\UniqueFileIdentifierFrame.cs" />
     <Compile Include="TagLib\Id3v2\Frames\UnknownFrame.cs" />
     <Compile Include="TagLib\Id3v2\Frames\UnsynchronisedLyricsFrame.cs" />
-    <Compile Include="TagLib\Image\Codec.cs" />
-    <Compile Include="TagLib\Image\CombinedImageTag.cs" />
-    <Compile Include="TagLib\Image\File.cs" />
-    <Compile Include="TagLib\Image\ImageBlockFile.cs" />
-    <Compile Include="TagLib\Image\ImageOrientation.cs" />
-    <Compile Include="TagLib\Image\ImageTag.cs" />
-    <Compile Include="TagLib\Image\NoMetadata\File.cs" />
-    <Compile Include="TagLib\Jpeg\Codec.cs" />
-    <Compile Include="TagLib\Jpeg\File.cs" />
-    <Compile Include="TagLib\Jpeg\JpegCommentTag.cs" />
-    <Compile Include="TagLib\Jpeg\Marker.cs" />
-    <Compile Include="TagLib\Jpeg\Table.cs" />
     <Compile Include="TagLib\Matroska\AudioTrack.cs" />
     <Compile Include="TagLib\Matroska\EBMLElement.cs" />
     <Compile Include="TagLib\Matroska\EBMLIDs.cs" />
@@ -245,9 +184,6 @@
     <Compile Include="TagLib\Ogg\XiphComment.cs" />
     <Compile Include="TagLib\Ogg\Codecs\Theora.cs" />
     <Compile Include="TagLib\Ogg\Codecs\Vorbis.cs" />
-    <Compile Include="TagLib\Png\Codec.cs" />
-    <Compile Include="TagLib\Png\File.cs" />
-    <Compile Include="TagLib\Png\PngTag.cs" />
     <Compile Include="TagLib\Riff\AviHeaderList.cs" />
     <Compile Include="TagLib\Riff\AviStream.cs" />
     <Compile Include="TagLib\Riff\BitmapInfoHeader.cs" />
@@ -258,24 +194,8 @@
     <Compile Include="TagLib\Riff\ListTag.cs" />
     <Compile Include="TagLib\Riff\MovieIdTag.cs" />
     <Compile Include="TagLib\Riff\WaveFormatEx.cs" />
-    <Compile Include="TagLib\Tiff\BaseTiffFile.cs" />
-    <Compile Include="TagLib\Tiff\Codec.cs" />
-    <Compile Include="TagLib\Tiff\File.cs" />
-    <Compile Include="TagLib\Tiff\Arw\File.cs" />
-    <Compile Include="TagLib\Tiff\Cr2\File.cs" />
-    <Compile Include="TagLib\Tiff\Dng\File.cs" />
-    <Compile Include="TagLib\Tiff\Nef\File.cs" />
-    <Compile Include="TagLib\Tiff\Pef\File.cs" />
-    <Compile Include="TagLib\Tiff\Rw2\File.cs" />
-    <Compile Include="TagLib\Tiff\Rw2\IFDReader.cs" />
-    <Compile Include="TagLib\Tiff\Rw2\IFDTag.cs" />
     <Compile Include="TagLib\WavPack\File.cs" />
     <Compile Include="TagLib\WavPack\StreamHeader.cs" />
-    <Compile Include="TagLib\Xmp\XmlNodeExtensions.cs" />
-    <Compile Include="TagLib\Xmp\XmpNode.cs" />
-    <Compile Include="TagLib\Xmp\XmpNodeType.cs" />
-    <Compile Include="TagLib\Xmp\XmpNodeVisitor.cs" />
-    <Compile Include="TagLib\Xmp\XmpTag.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -284,9 +204,7 @@
     <Reference Include="ICSharpCode.SharpZipLib" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <Folder Include="TagLib\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="TagLib\TagLib.sources" />
   </ItemGroup>

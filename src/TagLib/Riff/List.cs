@@ -33,7 +33,6 @@ namespace TagLib.Riff {
 	///    cref="T:System.Collections.Generic.Dictionary`2" /> to provide
 	///    support for reading and writing RIFF lists.
 	/// </summary>
-	[Serializable]
 	[ComVisible(false)]
 	public class List : Dictionary <ByteVector,ByteVectorCollection>
 	{
@@ -124,11 +123,13 @@ namespace TagLib.Riff {
 		///    cref="List" /> implements the <see cref="ISerializable"
 		///    /> interface.
 		/// </remarks>
+        /*
 		protected List (SerializationInfo info,
 		                StreamingContext context)
 			: base (info, context)
 		{
 		}
+        */
 #endregion
 		
 		

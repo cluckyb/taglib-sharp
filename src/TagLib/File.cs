@@ -1425,7 +1425,7 @@ namespace TagLib {
 				file.MimeType = mimetype;
 				return file;
 			} catch (System.Reflection.TargetInvocationException e) {
-                PrepareExceptionForRethrow(e.InnerException);
+                // PrepareExceptionForRethrow(e.InnerException);
 				throw e.InnerException;
 			}
 		}
@@ -1471,6 +1471,7 @@ namespace TagLib {
 			Mode = old_mode;
 		}
 
+        /*
         /// <summary>
         /// Causes the original strack trace of the exception to be preserved when it is rethrown
         /// </summary>
@@ -1485,6 +1486,7 @@ namespace TagLib {
             mgr.RegisterObject(ex, 1, si); // prepare for SetObjectData
             mgr.DoFixups(); // ObjectManager calls SetObjectData
 		}
+         */
 
 		#endregion
 		
